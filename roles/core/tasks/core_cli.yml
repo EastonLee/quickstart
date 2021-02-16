@@ -10,7 +10,7 @@
     update_cache: yes
 
 - name: install cli
-  shell: GO111MODULE=on go get github.com/projecteru2/cli
+  shell: GO111MODULE=on go get github.com/projecteru2/cli@v20.09.30
 
 - name: add cli into $PATH
   lineinfile:

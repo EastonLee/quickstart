@@ -4,6 +4,6 @@
   when: upgrade
 
 - name: run core container
-  shell: docker run -d --name eru-core --net host --restart always -v /etc/eru:/etc/eru projecteru2/core /usr/bin/eru-core
+  shell: docker run -d --name eru-core --net host --restart always -v /etc/eru:/etc/eru projecteru2/core:v20.08.30 /usr/bin/eru-core
   register: res
   failed_when: res.rc != 0 and 'Conflict' not in res.stderr
