@@ -20,4 +20,4 @@
 
 - name: run eru agent
   delegate_to: "{{ core_host }}"
-  shell: /root/go/bin/cli container deploy --pod eru --node {{ node_docker_name }} --entry agent --file /etc/eru/agent.yaml:/agent.yaml --network host --image projecteru2/agent:v20.08.15 --cpu 0 --memory 0 --env ERU_HOSTNAME={{ node_docker_name }} https://raw.githubusercontent.com/projecteru2/agent/master/spec.yaml
+  shell: /root/go/bin/cli container deploy --pod eru --node {{ node_docker_name }} --entry agent --file /etc/eru/agent.yaml:/agent.yaml --network host --image projecteru2/agent:v20.08.15 --cpu 0 --memory 0 --env ERU_HOSTNAME={{ node_docker_name }} https://raw.githubusercontent.com/projecteru2/agent/v20.08.15/spec.yaml
